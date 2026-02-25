@@ -1,0 +1,38 @@
+MicroServicios_Eureka_Server/eurekaserver/HELP.md
+MicroServicios_Eureka_Server/eurekaserver/target/
+MicroServicios_Eureka_Server/eurekaserver/.mvn/wrapper/maven-wrapper.jar
+!MicroServicios_Eureka_Server/eurekaserver/**/src/main/**/target/
+!MicroServicios_Eureka_Server/eurekaserver/**/src/test/**/target/
+
+### STS ###
+MicroServicios_Eureka_Server/eurekaserver/.apt_generated
+MicroServicios_Eureka_Server/eurekaserver/.classpath
+MicroServicios_Eureka_Server/eurekaserver/.factorypath
+MicroServicios_Eureka_Server/eurekaserver/.project
+MicroServicios_Eureka_Server/eurekaserver/.settings
+MicroServicios_Eureka_Server/eurekaserver/.springBeans
+MicroServicios_Eureka_Server/eurekaserver/.sts4-cache
+
+### IntelliJ IDEA ###
+MicroServicios_Eureka_Server/eurekaserver/.idea
+MicroServicios_Eureka_Server/eurekaserver/*.iws
+MicroServicios_Eureka_Server/eurekaserver/*.iml
+MicroServicios_Eureka_Server/eurekaserver/*.ipr
+
+### NetBeans ###
+MicroServicios_Eureka_Server/eurekaserver/nbproject/private/
+MicroServicios_Eureka_Server/eurekaserver/nbbuild/
+MicroServicios_Eureka_Server/eurekaserver/dist/
+MicroServicios_Eureka_Server/eurekaserver/nbdist/
+MicroServicios_Eureka_Server/eurekaserver/.nb-gradle/
+MicroServicios_Eureka_Server/eurekaserver/build/
+!MicroServicios_Eureka_Server/eurekaserver/**/src/main/**/build/
+!MicroServicios_Eureka_Server/eurekaserver/**/src/test/**/build/
+
+### VS Code ###
+MicroServicios_Eureka_Server/eurekaserver/.vscode/
+
+## Repositories ##
+MicroServicios_Eureka_APIGateway/
+MicroServicios_Eureka_CouponService/
+MicroServicios_Eureka_ProductService/
