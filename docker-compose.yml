@@ -1,0 +1,53 @@
+services:
+  eureka-server:
+    build:
+      context: ./MicroServicios_Eureka_Server/eurekaserver
+      dockerfile: Dockerfile
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8761/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  gateway:
+    build:
+      context: ./MicroServicios_Eureka_APIGateway/apigateway
+      dockerfile: Dockerfile
+    container_name: gateway
+    ports:
+      - "8082:8080"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+      couponservice:
+        condition: service_started
+      productservice:
+        condition: service_started
+
+  couponservice:
+    build:
+      context: ./MicroServicios_Eureka_CouponService/couponservice
+      dockerfile: Dockerfile
+    container_name: couponservice
+    ports:
+      - "8081:8080"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+
+  productservice:
+    build:
+      context: ./MicroServicios_Eureka_ProductService/productservice
+      dockerfile: Dockerfile
+    container_name: productservice
+    ports:
+      - "8080:8080"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+      couponservice:
+        condition: service_started
